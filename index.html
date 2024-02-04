@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO LIST</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <section class="head-section">
+        <div class="logo">
+           <img src="./Image/Logo.png" height="50px" width="150px">
+        </div>   
+    </section>
+    <section class="main" >
+      <div class="search-section">
+        <input type="text" name="search-bar" placeholder="Enter Your To-do List Task Here" id="search-bar" >
+        <button type="button" class="material-icons" id="add-task">Add </button>
+      </div>
+
+      <div class="session-heading">
+          <div class="headline-1">
+            <h4>To Do</h4>
+            <div id="to-do-count">0</div>
+          </div>
+          <div class="headline-1">
+            <h4>High Priority</h4>
+            <div id="priority-count">0</div>
+          </div>
+      </div>
+    </section>
+    <section class="task-section" id="task-section">
+       
+    </section>
+    <section class="footer">
+        <div class="footer-options"> <h4>TO-DO</h4> <div class="to-do status" id="to-do">0</div> </div>
+        <div class="footer-options"> <h4>Inprogress</h4> <div class="in-progress status" id="in-progress">0</div> </div>
+        <div class="footer-options"> <h4>Done</h4> <div class="done status" id="done">0</div> </div>
+    </section>
+   
+     <section class="modal hide-modal " id="modal">
+        <span class="material-symbols-outlined toggle" onclick="toggleFunction(this)">close</span>
+        <form id="create-task-form">
+            <h3>Add New Task</h3>
+            <input
+              name="title"
+              type="text"
+              placeholder="Task Title"
+              value="video streaming"
+              required
+            />
+      
+            <input
+              name="dueDate"
+              type="date"
+              placeholder="Due Date"
+              required
+            />
+
+            <select name="priorityLevel" required>
+                <option value="LOW">Low</option>
+                <option value="MEDIUM">Medium</option>
+                <option value="HIGH">High</option>
+              </select>
+      
+            <select name="status" required>
+              <option value="TODO">To Do</option>
+              <option value="INPROGRESS">In Progress</option>
+              <option value="DONE">Done</option>
+            </select>
+      
+            <button type="submit">Create New Task</button>
+        </form>
+    </section>
+
+
+
+    <script src="./list.js"></script>
+</body>
+</html>
